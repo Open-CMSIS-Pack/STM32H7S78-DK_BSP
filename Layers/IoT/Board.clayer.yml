@@ -1,0 +1,55 @@
+layer:
+  type: Board
+  description: STM32H7S78-DK board setup for IoT
+  for-board: STMicroelectronics::STM32H7S78-DK
+
+  generators:
+    options:
+      - generator: CubeMX
+        path: ./CubeMX
+        name: Board
+        map: Appli
+
+  connections:
+    - connect: STM32H7S78-DK Board
+      provides:
+        - CMSIS_USB_Device
+        - CMSIS_VIO
+        - STDIN
+        - STDOUT
+        - STDERR
+        - Heap: 1024
+
+  define:
+    - CMSIS_target_header: \"STM32H7S78-DK.h\"
+
+  packs:
+    - pack: Keil::STM32H7RSxx_DFP@>=1.0.0-0
+    - pack: Keil::STM32H7S78-DK_BSP@>=1.0.0-0
+    - pack: ARM::CMSIS@>=6.0.0-0
+    - pack: ARM::CMSIS-Driver@>=2.8.0-0
+    - pack: ARM::CMSIS-Compiler@>=2.0.0-0
+    - pack: ARM::CMSIS-Driver_STM32@>=1.0.0-0
+
+  components:
+    - component: Device:CubeMX
+
+    - component: ARM::CMSIS:CORE
+
+    - component: CMSIS Driver:USART
+    - component: CMSIS Driver:USB Device
+    - component: CMSIS Driver:VIO:Board&STM32H7S78-DK
+
+    - component: ARM::CMSIS-Compiler:CORE
+    - component: ARM::CMSIS-Compiler:STDERR:Custom
+    - component: ARM::CMSIS-Compiler:STDOUT:Custom
+    - component: ARM::CMSIS-Compiler:STDIN:Custom
+
+  linker:
+    - script: CubeMX/STM32CubeMX/MDK-ARM/Appli/stm32h7rsxx_RAMxspi1_ROMxspi2.sct
+
+  groups:
+    - group: Board
+      files:
+        - file: ./STM32H7S78-DK.h
+        - file: ./retarget_stdio.c
