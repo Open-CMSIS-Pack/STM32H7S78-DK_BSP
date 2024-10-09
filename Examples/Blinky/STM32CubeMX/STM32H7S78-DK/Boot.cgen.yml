@@ -1,0 +1,52 @@
+generator-import:
+  for-device: STM32H7S7L8HxH
+  for-board: STM32H7S78-DK
+  define:
+    - USE_HAL_DRIVER
+    - STM32H7S7xx
+  add-path:
+    - ./STM32CubeMX/Drivers/STM32H7RSxx_HAL_Driver/Inc
+    - ./STM32CubeMX/Drivers/STM32H7RSxx_HAL_Driver/Inc/Legacy
+    - ./STM32CubeMX/Middlewares/ST/STM32_ExtMem_Manager
+    - ./STM32CubeMX/Middlewares/ST/STM32_ExtMem_Manager/boot
+    - ./STM32CubeMX/Middlewares/ST/STM32_ExtMem_Manager/sal
+    - ./STM32CubeMX/Middlewares/ST/STM32_ExtMem_Manager/nor_sfdp
+    - ./STM32CubeMX/Middlewares/ST/STM32_ExtMem_Manager/psram
+    - ./STM32CubeMX/Middlewares/ST/STM32_ExtMem_Manager/sdcard
+    - ./STM32CubeMX/Middlewares/ST/STM32_ExtMem_Manager/user
+    - ./STM32CubeMX/Drivers/CMSIS/Device/ST/STM32H7RSxx/Include
+    - ./STM32CubeMX/Boot/Inc
+    - ./MX_Device/Boot
+  groups:
+    - group: CubeMX
+      files:
+        - file: ./STM32CubeMX/Boot/Src/main.c
+        - file: ./STM32CubeMX/Boot/Src/extmem_manager.c
+        - file: ./STM32CubeMX/Boot/Src/stm32h7rsxx_it.c
+        - file: ./STM32CubeMX/Boot/Src/stm32h7rsxx_hal_msp.c
+        - file: ./STM32CubeMX/Middlewares/ST/STM32_ExtMem_Manager/stm32_extmem.c
+        - file: ./STM32CubeMX/Middlewares/ST/STM32_ExtMem_Manager/boot/stm32_boot_xip.c
+        - file: ./STM32CubeMX/Middlewares/ST/STM32_ExtMem_Manager/sal/stm32_sal_xspi.c
+        - file: ./STM32CubeMX/Middlewares/ST/STM32_ExtMem_Manager/sal/stm32_sal_sd.c
+        - file: ./STM32CubeMX/Middlewares/ST/STM32_ExtMem_Manager/nor_sfdp/stm32_sfdp_data.c
+        - file: ./STM32CubeMX/Middlewares/ST/STM32_ExtMem_Manager/nor_sfdp/stm32_sfdp_driver.c
+        - file: ./STM32CubeMX/Middlewares/ST/STM32_ExtMem_Manager/psram/stm32_psram_driver.c
+        - file: ./STM32CubeMX/Middlewares/ST/STM32_ExtMem_Manager/sdcard/stm32_sdcard_driver.c
+        - file: ./STM32CubeMX/Middlewares/ST/STM32_ExtMem_Manager/user/stm32_user_driver.c
+        - file: ./STM32CubeMX/MDK-ARM/startup_stm32h7s7xx.s
+        - file: ./STM32CubeMX/Boot/Src/system_stm32h7rsxx.c
+    - group: STM32 HAL Driver
+      files:
+        - file: ./STM32CubeMX/Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_cortex.c
+        - file: ./STM32CubeMX/Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_rcc.c
+        - file: ./STM32CubeMX/Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_rcc_ex.c
+        - file: ./STM32CubeMX/Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_flash.c
+        - file: ./STM32CubeMX/Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_flash_ex.c
+        - file: ./STM32CubeMX/Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_gpio.c
+        - file: ./STM32CubeMX/Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_dma.c
+        - file: ./STM32CubeMX/Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_dma_ex.c
+        - file: ./STM32CubeMX/Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_pwr.c
+        - file: ./STM32CubeMX/Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_pwr_ex.c
+        - file: ./STM32CubeMX/Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal.c
+        - file: ./STM32CubeMX/Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_exti.c
+        - file: ./STM32CubeMX/Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_xspi.c
