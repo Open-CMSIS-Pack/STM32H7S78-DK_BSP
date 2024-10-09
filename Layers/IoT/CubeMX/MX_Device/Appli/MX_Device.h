@@ -1,6 +1,6 @@
 /******************************************************************************
  * File Name   : MX_Device.h
- * Date        : 20/06/2024 18:09:42
+ * Date        : 10/07/2024 09:26:26
  * Description : STM32Cube MX parameter definitions
  * Note        : This file is generated with a generator out of the
  *               STM32CubeMX project and its generated files (DO NOT EDIT!)
@@ -146,7 +146,7 @@
 #define MX_SDMMC1_CK_GPIOx                      GPIOC
 #define MX_SDMMC1_CK_GPIO_Mode                  GPIO_MODE_AF_PP
 #define MX_SDMMC1_CK_GPIO_PuPd                  GPIO_NOPULL
-#define MX_SDMMC1_CK_GPIO_Speed                 GPIO_SPEED_FREQ_HIGH
+#define MX_SDMMC1_CK_GPIO_Speed                 GPIO_SPEED_FREQ_VERY_HIGH
 #define MX_SDMMC1_CK_GPIO_AF                    GPIO_AF11_SDMMC1
 
 /* SDMMC1_CMD */
@@ -155,7 +155,7 @@
 #define MX_SDMMC1_CMD_GPIOx                     GPIOD
 #define MX_SDMMC1_CMD_GPIO_Mode                 GPIO_MODE_AF_PP
 #define MX_SDMMC1_CMD_GPIO_PuPd                 GPIO_NOPULL
-#define MX_SDMMC1_CMD_GPIO_Speed                GPIO_SPEED_FREQ_HIGH
+#define MX_SDMMC1_CMD_GPIO_Speed                GPIO_SPEED_FREQ_VERY_HIGH
 #define MX_SDMMC1_CMD_GPIO_AF                   GPIO_AF11_SDMMC1
 
 /* SDMMC1_D0 */
@@ -164,7 +164,7 @@
 #define MX_SDMMC1_D0_GPIOx                      GPIOC
 #define MX_SDMMC1_D0_GPIO_Mode                  GPIO_MODE_AF_PP
 #define MX_SDMMC1_D0_GPIO_PuPd                  GPIO_NOPULL
-#define MX_SDMMC1_D0_GPIO_Speed                 GPIO_SPEED_FREQ_HIGH
+#define MX_SDMMC1_D0_GPIO_Speed                 GPIO_SPEED_FREQ_VERY_HIGH
 #define MX_SDMMC1_D0_GPIO_AF                    GPIO_AF11_SDMMC1
 
 /* SDMMC1_D1 */
@@ -173,7 +173,7 @@
 #define MX_SDMMC1_D1_GPIOx                      GPIOC
 #define MX_SDMMC1_D1_GPIO_Mode                  GPIO_MODE_AF_PP
 #define MX_SDMMC1_D1_GPIO_PuPd                  GPIO_NOPULL
-#define MX_SDMMC1_D1_GPIO_Speed                 GPIO_SPEED_FREQ_HIGH
+#define MX_SDMMC1_D1_GPIO_Speed                 GPIO_SPEED_FREQ_VERY_HIGH
 #define MX_SDMMC1_D1_GPIO_AF                    GPIO_AF11_SDMMC1
 
 /* SDMMC1_D2 */
@@ -182,7 +182,7 @@
 #define MX_SDMMC1_D2_GPIOx                      GPIOC
 #define MX_SDMMC1_D2_GPIO_Mode                  GPIO_MODE_AF_PP
 #define MX_SDMMC1_D2_GPIO_PuPd                  GPIO_NOPULL
-#define MX_SDMMC1_D2_GPIO_Speed                 GPIO_SPEED_FREQ_HIGH
+#define MX_SDMMC1_D2_GPIO_Speed                 GPIO_SPEED_FREQ_VERY_HIGH
 #define MX_SDMMC1_D2_GPIO_AF                    GPIO_AF12_SDMMC1
 
 /* SDMMC1_D3 */
@@ -191,7 +191,7 @@
 #define MX_SDMMC1_D3_GPIOx                      GPIOC
 #define MX_SDMMC1_D3_GPIO_Mode                  GPIO_MODE_AF_PP
 #define MX_SDMMC1_D3_GPIO_PuPd                  GPIO_NOPULL
-#define MX_SDMMC1_D3_GPIO_Speed                 GPIO_SPEED_FREQ_HIGH
+#define MX_SDMMC1_D3_GPIO_Speed                 GPIO_SPEED_FREQ_VERY_HIGH
 #define MX_SDMMC1_D3_GPIO_AF                    GPIO_AF11_SDMMC1
 
 /*------------------------------ SPI4           -----------------------------*/

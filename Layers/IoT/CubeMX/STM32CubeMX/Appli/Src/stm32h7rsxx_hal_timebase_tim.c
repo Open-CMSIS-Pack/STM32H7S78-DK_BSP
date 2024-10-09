@@ -39,7 +39,7 @@
 
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/
- TIM_HandleTypeDef htim17;
+TIM_HandleTypeDef htim17;
 
 /* Private function prototypes -----------------------------------------------*/
 #if (USE_HAL_TIM_REGISTER_CALLBACKS == 1U)
@@ -77,9 +77,9 @@ HAL_StatusTypeDef HAL_InitTick(uint32_t TickPriority)
   /* Compute TIM17 clock */
   if (uwAPB2Prescaler == RCC_APB2_DIV1)
   {
-        uwTimclock = HAL_RCC_GetPCLK2Freq();
+    uwTimclock = HAL_RCC_GetPCLK2Freq();
   }
- else if (uwAPB2Prescaler == RCC_APB2_DIV2)
+  else if (uwAPB2Prescaler == RCC_APB2_DIV2)
   {
     uwTimclock = 2UL * HAL_RCC_GetPCLK2Freq();
   }
@@ -93,8 +93,7 @@ HAL_StatusTypeDef HAL_InitTick(uint32_t TickPriority)
     {
       uwTimclock = 4UL * HAL_RCC_GetPCLK2Freq();
     }
-
-    }
+  }
 
   /* Compute the prescaler value to have TIM17 counter clock equal to TIM_CNT_FREQ */
   uwPrescalerValue = (uint32_t)((uwTimclock / TIM_CNT_FREQ) - 1U);
@@ -108,7 +107,7 @@ HAL_StatusTypeDef HAL_InitTick(uint32_t TickPriority)
   + ClockDivision = 0
   + Counter direction = Up
   */
-  htim17.Init.Period = ((uint32_t)uwTickFreq * (TIM_CNT_FREQ / TIM_FREQ)) - 1U;
+  htim17.Init.Period = ((uint32_t)uwTickFreq  * (TIM_CNT_FREQ / TIM_FREQ)) - 1U;
   htim17.Init.Prescaler = uwPrescalerValue;
   htim17.Init.ClockDivision = 0;
   htim17.Init.CounterMode = TIM_COUNTERMODE_UP;
@@ -116,9 +115,9 @@ HAL_StatusTypeDef HAL_InitTick(uint32_t TickPriority)
   Status = HAL_TIM_Base_Init(&htim17);
   if (Status == HAL_OK)
   {
-  #if (USE_HAL_TIM_REGISTER_CALLBACKS == 1U)
-  HAL_TIM_RegisterCallback(&htim17, HAL_TIM_PERIOD_ELAPSED_CB_ID, TimeBase_TIM_PeriodElapsedCallback);
-  #endif /* USE_HAL_TIM_REGISTER_CALLBACKS */
+#if (USE_HAL_TIM_REGISTER_CALLBACKS == 1U)
+    HAL_TIM_RegisterCallback(&htim17, HAL_TIM_PERIOD_ELAPSED_CB_ID, TimeBase_TIM_PeriodElapsedCallback);
+#endif /* USE_HAL_TIM_REGISTER_CALLBACKS */
     /* Start the TIM time Base generation in interrupt mode */
     Status = HAL_TIM_Base_Start_IT(&htim17);
     if (Status == HAL_OK)
@@ -181,6 +180,7 @@ void TimeBase_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
   UNUSED(htim);
 
   HAL_IncTick();
+
 }
 #endif /* USE_HAL_TIM_REGISTER_CALLBACKS */
 /**

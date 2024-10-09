@@ -1,3 +1,4 @@
+
 /* USER CODE BEGIN Header */
 /**
   ******************************************************************************
@@ -272,6 +273,7 @@ void HAL_DCMIPP_MspInit(DCMIPP_HandleTypeDef* hdcmipp)
   /* USER CODE BEGIN DCMIPP_MspInit 1 */
 
   /* USER CODE END DCMIPP_MspInit 1 */
+
   }
 
 }
@@ -415,6 +417,7 @@ void HAL_ETH_MspInit(ETH_HandleTypeDef* heth)
   /* USER CODE BEGIN ETH_MspInit 1 */
 
   /* USER CODE END ETH_MspInit 1 */
+
   }
 
 }
@@ -510,6 +513,7 @@ void HAL_I2C_MspInit(I2C_HandleTypeDef* hi2c)
   /* USER CODE BEGIN I2C1_MspInit 1 */
 
   /* USER CODE END I2C1_MspInit 1 */
+
   }
 
 }
@@ -614,6 +618,7 @@ void HAL_I2S_MspInit(I2S_HandleTypeDef* hi2s)
   /* USER CODE BEGIN SPI6_MspInit 1 */
 
   /* USER CODE END SPI6_MspInit 1 */
+
   }
 
 }
@@ -793,6 +798,7 @@ void HAL_LTDC_MspInit(LTDC_HandleTypeDef* hltdc)
   /* USER CODE BEGIN LTDC_MspInit 1 */
 
   /* USER CODE END LTDC_MspInit 1 */
+
   }
 
 }
@@ -906,27 +912,28 @@ void HAL_SD_MspInit(SD_HandleTypeDef* hsd)
     GPIO_InitStruct.Pin = SD_CMD_Pin;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
-    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
     GPIO_InitStruct.Alternate = GPIO_AF11_SDMMC1;
     HAL_GPIO_Init(SD_CMD_GPIO_Port, &GPIO_InitStruct);
 
     GPIO_InitStruct.Pin = SD_D2_Pin;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
-    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
     GPIO_InitStruct.Alternate = GPIO_AF12_SDMMC1;
     HAL_GPIO_Init(SD_D2_GPIO_Port, &GPIO_InitStruct);
 
     GPIO_InitStruct.Pin = SD_D3_Pin|SD_CK_Pin|SD_D0_Pin|SD_D1_Pin;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
-    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
     GPIO_InitStruct.Alternate = GPIO_AF11_SDMMC1;
     HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
   /* USER CODE BEGIN SDMMC1_MspInit 1 */
 
   /* USER CODE END SDMMC1_MspInit 1 */
+
   }
 
 }
@@ -1011,6 +1018,7 @@ void HAL_SPI_MspInit(SPI_HandleTypeDef* hspi)
   /* USER CODE BEGIN SPI4_MspInit 1 */
 
   /* USER CODE END SPI4_MspInit 1 */
+
   }
 
 }
@@ -1091,6 +1099,7 @@ void HAL_UART_MspInit(UART_HandleTypeDef* huart)
   /* USER CODE BEGIN UART4_MspInit 1 */
 
   /* USER CODE END UART4_MspInit 1 */
+
   }
 
 }
@@ -1168,6 +1177,7 @@ void HAL_PCD_MspInit(PCD_HandleTypeDef* hpcd)
   /* USER CODE BEGIN USB_OTG_FS_MspInit 1 */
 
   /* USER CODE END USB_OTG_FS_MspInit 1 */
+
   }
 
 }
@@ -1212,6 +1222,7 @@ void HAL_HCD_MspInit(HCD_HandleTypeDef* hhcd)
   /* USER CODE BEGIN USB_OTG_HS_MspInit 1 */
 
   /* USER CODE END USB_OTG_HS_MspInit 1 */
+
   }
 
 }
