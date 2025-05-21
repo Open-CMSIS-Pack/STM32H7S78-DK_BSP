@@ -79,7 +79,6 @@
       <book category="schematic" name="https://www.st.com/resource/en/schematic_pack/mb1736-h7s7l8-d01-schematic.pdf" title="Schematics" public="true"/>
       <book category="other"     name="Documents/README.md" title="Guide" public="true"/>
       <mountedDevice    deviceIndex="0" Dvendor="STMicroelectronics:13" Dname="STM32H7S7L8HxH"/>
-      <compatibleDevice deviceIndex="0" Dvendor="STMicroelectronics:13" DsubFamily="STM32H7S7"/>
       <feature type="ODbg"      n="1"              name="On-board ST-LINK-V3EC"/>
       <feature type="XTAL"      n="24000000"       name="Crystal Oscillator"/>
       <feature type="ROM"       n="1"              name="1-Gbit Octal-SPI NOR flash memory"/>
