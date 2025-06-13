@@ -21,8 +21,9 @@
       - rename thread IDs
       - modify app_main_thread (replace loop forever)
       - add DWARF-5 debug information
-      - updated vcpkg-configuration.json to use cmsis-toolbox 2.9.0
-      - added dbgconf files for the Blinky example 
+      - add .cmsis/Blinky+STM32H7S78-DK.dbgconf and .cmsis/Blinky+Blinky+STM32H7S78-DK.dbgconf@base@1.0.0 files
+      - modified the CI workflow .github/Test-Examples.yml
+      - updated settings in vcpkg-configuration.json file	  
     </release>
   </releases>
 
