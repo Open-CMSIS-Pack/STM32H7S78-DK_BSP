@@ -14,13 +14,15 @@
   </licenseSets>
 
   <releases>
-    <release version="1.0.1-dev">
+    <release version="1.0.2-dev">
       Active development ...
       Blinky project:
       - specify thread names using thread attributes
       - rename thread IDs
       - modify app_main_thread (replace loop forever)
       - add DWARF-5 debug information
+      - updated vcpkg-configuration.json to use cmsis-toolbox 2.9.0
+      - added dbgconf files for the Blinky example 
     </release>
   </releases>
 
