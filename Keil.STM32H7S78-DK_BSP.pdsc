@@ -22,8 +22,6 @@
       - modify app_main_thread (replace loop forever)
       - add DWARF-5 debug information
       - add .cmsis/Blinky+STM32H7S78-DK.dbgconf and .cmsis/Blinky+Blinky+STM32H7S78-DK.dbgconf@base@1.0.0 files
-      - modified the CI workflow .github/Test-Examples.yml
-      - updated settings in vcpkg-configuration.json file	  
     </release>
   </releases>
 
