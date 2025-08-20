@@ -18,3 +18,10 @@ project:
   linker:
     - script: ../STM32CubeMX/STM32H7S78-DK/STM32CubeMX/MDK-ARM/Boot/stm32h7s7xx_flash.sct
       for-compiler: AC6
+
+  # List executable file formats to be generated.
+  output:
+    type:
+      - elf
+      - hex
+      - map

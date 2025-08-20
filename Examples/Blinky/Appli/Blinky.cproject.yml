@@ -45,3 +45,10 @@ project:
   linker:
     - script: ../STM32CubeMX/STM32H7S78-DK/STM32CubeMX/MDK-ARM/Appli/stm32h7rsxx_RAMxspi1_ROMxspi2.sct
       for-compiler: AC6
+
+  # List executable file formats to be generated.
+  output:
+    type:
+      - elf
+      - hex
+      - map
